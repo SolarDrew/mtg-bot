@@ -1,0 +1,58 @@
+##                      _           _     _
+##   ___  _ __  ___  __| |_ __ ___ (_) __| |
+##  / _ \| '_ \/ __|/ _` | '__/ _ \| |/ _` |
+## | (_) | |_) \__ \ (_| | | | (_) | | (_| |
+##  \___/| .__/|___/\__,_|_|  \___/|_|\__,_|
+##       |_|
+##                   __ _
+##   ___ ___  _ __  / _(_) __ _
+##  / __/ _ \| '_ \| |_| |/ _` |
+## | (_| (_) | | | |  _| | (_| |
+##  \___\___/|_| |_|_| |_|\__, |
+##                        |___/
+##
+
+## Set the logging level
+logging:
+  level: debug
+  path: false
+  console: true
+
+## Set the location for opsdroid to install modules
+# module-path: "/usr/src/app/"
+module-path: "/home/drew/opsdroid-projects/install/"
+
+## Parsers
+parsers:
+  - name: regex
+    enabled: true
+
+  - name: crontab
+    enabled: false
+
+web:
+    port: 8890
+
+## Connector modules
+connectors:
+  - name: matrix
+    repo: https://github.com/SolarDrew/connector-matrix
+    mxid: "@mtgbot:matrix.com"
+    password: ""
+    rooms:
+      main: "!bgWkRWNyVNtqYpndIG:matrix.org"
+    room_specific_nicks: True
+    no-cache: true
+
+## Database modules (optional)
+# databases:
+#   - name: matrix
+#     repo: https://github.com/SolarDrew/database-matrix
+#     no-cache: true
+
+## Skill modules
+skills:
+
+  - name: mtg-quiz
+    repo: https://github.com/SolarDrew/skill-mtg-quiz
+    no-cache: true
