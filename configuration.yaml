@@ -37,8 +37,8 @@ web:
 connectors:
   - name: matrix
     repo: https://github.com/SolarDrew/connector-matrix
-    mxid: "@mtgbot:matrix.com"
     password: ""
+    mxid: "@mtgbot:matrix.org"
     rooms:
       main: "!bgWkRWNyVNtqYpndIG:matrix.org"
     room_specific_nicks: True
