@@ -56,3 +56,4 @@ skills:
   - name: mtg-quiz
     repo: https://github.com/SolarDrew/skill-mtg-quiz
     no-cache: true
+    current_set: m19
